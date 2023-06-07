@@ -1,8 +1,15 @@
+const cors = require("cors");
+
 const io = require("socket.io")(8900, {
   cors: {
     origin: "https://my-social-app-cso6.onrender.com",
   },
 });
+app.use(
+  cors({
+    origin: "https://my-social-app-cso6.onrender.com",
+  })
+);
 
 let onlineUsers = [];
 
